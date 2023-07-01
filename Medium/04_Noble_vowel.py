@@ -34,7 +34,7 @@ Explanation
 In the first string, every vowel is followed by another vowel or consonant. So the string is Noble Vowel.
 In the second string, f is a consonant, which should be followed by a vowel but it is being followed by another consonant, so this string is not Noble Vowel.'''
 
-T=int(input())
+'''T=int(input())
 vowels=["a","e","i","o","u"]
 while T>0:
     S=input().lower()
@@ -45,6 +45,25 @@ while T>0:
                 print("YES")
             if i<(len(S)-1) and S[i+1] not in vowels:
                 print("NO")
+                break
+        else:
+            val+=1
+        if i==len(S)-1 and val>0:
+            print("YES")
+    T-=1'''
+
+
+T=int(input())
+vowels=["a","e","i","o","u"]
+while T>0:
+    S=input().lower()
+    val=0
+    for i in range(len(S)):
+        if len(S)==1:
+            print("YES")
+        if S[i] in vowels:
+            if i<(len(S)-1) and S[i+1] in vowels:
+                print("YES")
                 break
         else:
             val+=1
